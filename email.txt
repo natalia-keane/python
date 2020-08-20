@@ -1,0 +1,40 @@
+Pseudocode that allows the user to make transactions to a
+savings account. Assume that the account initially has a balance of $1,000.
+
+set bal to 1000
+
+set choice
+while true
+    print "\nMenu\n(V)iew Balance\n(D)eposit Funds\n(W)ithdraw Funds\n(Q)uit"
+    input choice
+    if choice is q
+        exit
+    if choice is v
+        call balance
+    if choice is d
+        call deposit
+    if choice is w
+        call withdraw
+    else
+        print "Invalid choice, please choose again\n"
+
+function deposit()    
+print "Enter amount of deposit: "
+input amount
+add the amount into the bal
+print "Current balance"
+print the new bal
+endfunction
+
+function withdraw()
+print "Enter amount of withdrawal: "
+input amount
+subtract the amount from the bal
+print "Current balance"
+print the new bal
+endfunction
+
+function balance()
+print "Current balance"
+print the bal
+endfunction
